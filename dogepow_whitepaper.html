@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
 <title>DogePow Token Whitepaper</title>
 <style>
 *{
@@ -11,123 +11,291 @@
 
 body{
   margin:0;
-  font-family: Arial, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   background:#0b1224;
   color:#eaf2ff;
-  line-height:1.8;
+  line-height:1.6;
+  overflow-x: hidden;
 }
 
 .container{
-  max-width:1000px;
-  margin:auto;
-  padding:16px;
+  max-width:100%;
+  width:100%;
+  margin:0 auto;
+  padding:12px;
+  overflow-x: hidden;
 }
 
 .hero{
   background:linear-gradient(135deg,#102447,#1a2f5c);
   border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  padding:24px;
-  margin-bottom:24px;
+  border-radius:16px;
+  padding:16px;
+  margin-bottom:16px;
 }
 
 h1{
-  font-size:42px;
-  margin:0 0 10px;
+  font-size:28px;
+  margin:0 0 8px;
   color:#3db7ff;
+  word-wrap: break-word;
+  line-height:1.2;
 }
 
 .subtitle{
-  font-size:18px;
+  font-size:14px;
   color:#b8c6dd;
+  word-wrap: break-word;
+  line-height:1.4;
 }
 
 .badge{
   display:inline-block;
-  margin-top:16px;
-  padding:8px 16px;
+  margin-top:12px;
+  padding:6px 12px;
   border-radius:999px;
   background:#0d6efd33;
   color:#52c7ff;
   font-weight:bold;
-  font-size:14px;
+  font-size:12px;
+  white-space:normal;
 }
 
 .card{
   background:#1a2340;
   border:1px solid rgba(255,255,255,.08);
-  border-radius:24px;
-  padding:24px;
+  border-radius:16px;
+  padding:16px;
 }
 
 h2{
   color:#2fc3ff;
-  font-size:32px;
-  margin-top:28px;
-  margin-bottom:16px;
+  font-size:22px;
+  margin-top:20px;
+  margin-bottom:12px;
+  word-wrap: break-word;
+  line-height:1.3;
 }
 
 h3{
-  font-size:24px;
-  margin-top:20px;
-  margin-bottom:12px;
+  font-size:18px;
+  margin-top:16px;
+  margin-bottom:10px;
+  color:#52c7ff;
+  word-wrap: break-word;
 }
 
 p,li{
-  font-size:16px;
+  font-size:14px;
   color:#d7e1f2;
-  margin-bottom:10px;
+  margin-bottom:8px;
+  word-wrap: break-word;
+  line-height:1.5;
 }
 
 ul{
-  padding-left:20px;
+  padding-left:16px;
+  margin:8px 0;
+}
+
+li{
+  margin-bottom:6px;
+}
+
+/* Mobile Table Styles */
+.table-wrapper{
+  overflow-x: auto;
+  margin:16px 0;
+  border-radius:12px;
+  border:1px solid rgba(255,255,255,.08);
 }
 
 table{
   width:100%;
   border-collapse:collapse;
-  margin:20px 0;
-  font-size:14px;
+  margin:0;
+  font-size:13px;
+  min-width:300px;
 }
 
 th,td{
-  padding:12px;
+  padding:10px;
   border-bottom:1px solid rgba(255,255,255,.08);
   text-align:left;
+  word-wrap: break-word;
 }
 
 th{
   color:#2fc3ff;
   font-weight:bold;
+  background:rgba(45,195,255,.08);
+}
+
+td{
+  color:#d7e1f2;
 }
 
 .note{
   background:#16304f;
   border-left:4px solid #2fc3ff;
-  padding:16px;
-  border-radius:12px;
-  margin:20px 0;
-  font-size:14px;
+  padding:12px;
+  border-radius:8px;
+  margin:16px 0;
+  font-size:13px;
+  line-height:1.5;
 }
 
 .footer{
-  margin-top:24px;
-  padding:16px;
-  border-radius:20px;
+  margin-top:20px;
+  padding:12px;
+  border-radius:12px;
   background:#16233d;
-  font-size:14px;
+  font-size:12px;
   color:#c9d5e7;
   text-align:center;
+  word-wrap: break-word;
 }
 
-/* Tablet devices (768px and up) */
-@media (min-width: 768px) {
+/* Small phones (320px to 480px) */
+@media (max-width: 480px) {
+  .container{
+    padding:10px;
+  }
+  
+  .hero{
+    padding:12px;
+    margin-bottom:12px;
+  }
+  
+  .card{
+    padding:12px;
+  }
+  
+  h1{
+    font-size:24px;
+    margin-bottom:6px;
+  }
+  
+  .subtitle{
+    font-size:13px;
+  }
+  
+  h2{
+    font-size:20px;
+    margin-top:16px;
+  }
+  
+  h3{
+    font-size:16px;
+  }
+  
+  table{
+    font-size:12px;
+  }
+  
+  th,td{
+    padding:8px;
+  }
+}
+
+/* Medium phones (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+  .container{
+    padding:14px;
+  }
+  
+  .hero{
+    padding:18px;
+    margin-bottom:18px;
+  }
+  
+  .card{
+    padding:18px;
+  }
+  
+  h1{
+    font-size:32px;
+  }
+  
+  .subtitle{
+    font-size:16px;
+  }
+  
+  h2{
+    font-size:26px;
+  }
+  
+  h3{
+    font-size:20px;
+  }
+  
+  p,li{
+    font-size:15px;
+  }
+  
+  table{
+    font-size:14px;
+  }
+  
+  th,td{
+    padding:11px;
+  }
+}
+
+/* Tablets (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container{
+    padding:20px;
+    max-width:900px;
+  }
+  
+  .hero{
+    padding:30px;
+  }
+  
+  .card{
+    padding:30px;
+  }
+  
+  h1{
+    font-size:44px;
+  }
+  
+  .subtitle{
+    font-size:19px;
+  }
+  
+  h2{
+    font-size:36px;
+  }
+  
+  h3{
+    font-size:25px;
+  }
+  
+  p,li{
+    font-size:17px;
+  }
+  
+  table{
+    font-size:15px;
+  }
+  
+  th,td{
+    padding:12px;
+  }
+}
+
+/* Large screens (1025px and up) */
+@media (min-width: 1025px) {
   .container{
     padding:24px;
+    max-width:1000px;
   }
   
   .hero{
     padding:40px;
+    margin-bottom:24px;
   }
   
   .card{
@@ -144,10 +312,12 @@ th{
   
   h2{
     font-size:42px;
+    margin-top:36px;
   }
   
   h3{
     font-size:30px;
+    margin-top:28px;
   }
   
   p,li{
@@ -163,18 +333,18 @@ th{
   }
   
   .footer{
-    font-size:18px;
+    font-size:16px;
   }
 }
 
-/* Large screens (1024px and up) */
-@media (min-width: 1024px) {
+/* Ultra-wide screens */
+@media (min-width: 1440px) {
   .container{
-    padding:24px;
+    max-width:1200px;
   }
   
   p,li{
-    font-size:22px;
+    font-size:20px;
   }
 }
 </style>
@@ -204,13 +374,15 @@ th{
     </ul>
 
     <h2>3. Token Distribution</h2>
-    <table>
-      <tr><th>Category</th><th>Allocation</th><th>Amount</th></tr>
-      <tr><td>Mining Rewards</td><td>60%</td><td>600,000,000 DPOW</td></tr>
-      <tr><td>Liquidity Pool</td><td>20%</td><td>200,000,000 DPOW</td></tr>
-      <tr><td>Team & Development</td><td>15%</td><td>150,000,000 DPOW</td></tr>
-      <tr><td>Marketing & Partnerships</td><td>5%</td><td>50,000,000 DPOW</td></tr>
-    </table>
+    <div class="table-wrapper">
+      <table>
+        <tr><th>Category</th><th>Allocation</th><th>Amount</th></tr>
+        <tr><td>Mining Rewards</td><td>60%</td><td>600,000,000 DPOW</td></tr>
+        <tr><td>Liquidity Pool</td><td>20%</td><td>200,000,000 DPOW</td></tr>
+        <tr><td>Team & Development</td><td>15%</td><td>150,000,000 DPOW</td></tr>
+        <tr><td>Marketing & Partnerships</td><td>5%</td><td>50,000,000 DPOW</td></tr>
+      </table>
+    </div>
 
     <h2>4. Use Cases</h2>
     <ul>
