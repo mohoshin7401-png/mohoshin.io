@@ -1,10 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>DogePow Token Whitepaper</title>
 <style>
+*{
+  box-sizing:border-box;
+}
+
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -12,7 +10,13 @@ body{
   color:#eaf2ff;
   line-height:1.8;
 }
-.container{max-width:1000px;margin:auto;padding:24px;}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:16px;
+}
+
 .hero{
   background:linear-gradient(135deg,#102447,#1a2f5c);
   border:1px solid rgba(255,255,255,.08);
@@ -20,8 +24,20 @@ body{
   padding:40px;
   margin-bottom:24px;
 }
-h1{font-size:56px;margin:0 0 10px;color:#3db7ff;}
-.subtitle{font-size:22px;color:#b8c6dd;}
+
+h1{
+  font-size:56px;
+  margin:0 0 10px;
+  color:#3db7ff;
+  line-height:1.2;
+  word-break:break-word;
+}
+
+.subtitle{
+  font-size:22px;
+  color:#b8c6dd;
+}
+
 .badge{
   display:inline-block;
   margin-top:16px;
@@ -30,19 +46,59 @@ h1{font-size:56px;margin:0 0 10px;color:#3db7ff;}
   background:#0d6efd33;
   color:#52c7ff;
   font-weight:bold;
+  font-size:16px;
 }
+
 .card{
   background:#1a2340;
   border:1px solid rgba(255,255,255,.08);
   border-radius:24px;
   padding:40px;
 }
-h2{color:#2fc3ff;font-size:42px;margin-top:36px;}
-h3{font-size:30px;margin-top:28px;}
-p,li{font-size:22px;color:#d7e1f2;}
-table{width:100%;border-collapse:collapse;margin:20px 0;}
-th,td{padding:14px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;}
-th{color:#2fc3ff;}
+
+h2{
+  color:#2fc3ff;
+  font-size:42px;
+  margin-top:36px;
+  line-height:1.2;
+}
+
+h3{
+  font-size:30px;
+  margin-top:28px;
+  line-height:1.3;
+}
+
+p, li{
+  font-size:22px;
+  color:#d7e1f2;
+}
+
+ul{
+  padding-left:28px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:20px 0;
+  display:block;
+  overflow-x:auto;
+  white-space:nowrap;
+  -webkit-overflow-scrolling:touch;
+}
+
+th, td{
+  padding:14px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  text-align:left;
+  font-size:20px;
+}
+
+th{
+  color:#2fc3ff;
+}
+
 .note{
   background:#16304f;
   border-left:4px solid #2fc3ff;
@@ -50,6 +106,7 @@ th{color:#2fc3ff;}
   border-radius:12px;
   margin:20px 0;
 }
+
 .footer{
   margin-top:24px;
   padding:24px;
@@ -58,95 +115,150 @@ th{color:#2fc3ff;}
   font-size:18px;
   color:#c9d5e7;
 }
+
+/* =========================
+   Tablet (≤ 992px)
+========================= */
+@media (max-width: 992px){
+  .hero,
+  .card{
+    padding:30px;
+  }
+
+  h1{
+    font-size:44px;
+  }
+
+  .subtitle{
+    font-size:20px;
+  }
+
+  h2{
+    font-size:34px;
+  }
+
+  h3{
+    font-size:26px;
+  }
+
+  p, li{
+    font-size:20px;
+  }
+
+  th, td{
+    font-size:18px;
+    padding:12px;
+  }
+}
+
+/* =========================
+   Mobile (≤ 768px)
+========================= */
+@media (max-width: 768px){
+  .container{
+    padding:12px;
+  }
+
+  .hero,
+  .card{
+    padding:24px;
+    border-radius:20px;
+  }
+
+  h1{
+    font-size:34px;
+  }
+
+  .subtitle{
+    font-size:18px;
+  }
+
+  .badge{
+    font-size:14px;
+    padding:7px 14px;
+  }
+
+  h2{
+    font-size:28px;
+    margin-top:28px;
+  }
+
+  h3{
+    font-size:22px;
+    margin-top:22px;
+  }
+
+  p, li{
+    font-size:18px;
+    line-height:1.7;
+  }
+
+  th, td{
+    font-size:16px;
+    padding:10px;
+  }
+
+  .footer{
+    font-size:16px;
+    padding:20px;
+  }
+}
+
+/* =========================
+   Small Mobile (≤ 480px)
+========================= */
+@media (max-width: 480px){
+  .container{
+    padding:10px;
+  }
+
+  .hero,
+  .card{
+    padding:18px;
+    border-radius:16px;
+  }
+
+  h1{
+    font-size:28px;
+  }
+
+  .subtitle{
+    font-size:16px;
+  }
+
+  .badge{
+    font-size:12px;
+    padding:6px 12px;
+  }
+
+  h2{
+    font-size:24px;
+  }
+
+  h3{
+    font-size:20px;
+  }
+
+  p, li{
+    font-size:16px;
+  }
+
+  ul{
+    padding-left:22px;
+  }
+
+  th, td{
+    font-size:14px;
+    padding:8px;
+  }
+
+  .note{
+    padding:14px;
+  }
+
+  .footer{
+    font-size:14px;
+    padding:16px;
+  }
+}
 </style>
-</head>
-<body>
-<div class="container">
-  <div class="hero">
-    <h1>DogePow Token Whitepaper</h1>
-    <div class="subtitle">Technical details and tokenomics of DogePow (DPOW) running on Solana</div>
-    <div class="badge">Version 1.0 • Last Updated: May 2026</div>
-  </div>
-
-  <div class="card">
-    <h2>1. Introduction</h2>
-    <p>DogePow (DPOW) is a utility token designed to power the DogePow ecosystem on the Solana blockchain. Users can collect promotional DPOW points through virtual mining and platform engagement.</p>
-    <div class="note">No actual cryptocurrency mining occurs in the mobile application. DPOW points are promotional rewards and may become eligible for future ecosystem utility.</div>
-
-    <h2>2. Technical Specifications</h2>
-    <ul>
-      <li><strong>Token Name:</strong> DogePow</li>
-      <li><strong>Symbol:</strong> DPOW</li>
-      <li><strong>Blockchain:</strong> Solana</li>
-      <li><strong>Token Standard:</strong> SPL Token</li>
-      <li><strong>Total Supply:</strong> 1,000,000,000 DPOW</li>
-      <li><strong>Decimals:</strong> 9</li>
-      <li><strong>Contract Address:</strong> Coming Soon</li>
-    </ul>
-
-    <h2>3. Token Distribution</h2>
-    <table>
-      <tr><th>Category</th><th>Allocation</th><th>Amount</th></tr>
-      <tr><td>Mining Rewards</td><td>60%</td><td>600,000,000 DPOW</td></tr>
-      <tr><td>Liquidity Pool</td><td>20%</td><td>200,000,000 DPOW</td></tr>
-      <tr><td>Team & Development</td><td>15%</td><td>150,000,000 DPOW</td></tr>
-      <tr><td>Marketing & Partnerships</td><td>5%</td><td>50,000,000 DPOW</td></tr>
-    </table>
-
-    
-    <h2>4. Use Cases</h2>
-    <ul>
-      <li>Virtual Mining Rewards</li>
-      <li>Referral Bonuses</li>
-      <li>Task Rewards</li>
-      <li>Premium Feature Access</li>
-      <li>Mining Boost Purchases</li>
-      <li>Subscription Discounts</li>
-      <li>In-App Marketplace</li>
-      <li>Staking Rewards</li>
-      <li>Governance Voting</li>
-      <li>Exclusive Events</li>
-      <li>Fee Discounts</li>
-    </ul>
-
-    <h2>5. Roadmap</h2>
-    <h3>Q2 2026</h3>
-    <ul>
-      <li>Whitepaper release</li>
-      <li>Mobile app launch</li>
-      <li>Community growth</li>
-    </ul>
-    <h3>Q3 2026</h3>
-    <ul>
-      <li>Token deployment on Solana</li>
-      <li>Liquidity setup</li>
-      <li>Security audit</li>
-    </ul>
-    <h3>Q4 2026</h3>
-    <ul>
-      <li>DEX listing</li>
-      <li>Enhanced utility features</li>
-    </ul>
-    <h3>Q1 2027</h3>
-    <ul>
-      <li>Ecosystem expansion</li>
-      <li>Global partnerships</li>
-    </ul>
-
-    <h2>6. Security & Transparency</h2>
-    <ul>
-      <li>Public blockchain verification</li>
-      <li>Independent smart contract audits</li>
-      <li>Transparent token allocation</li>
-    </ul>
-
-    <h2>7. Legal Disclaimer</h2>
-    <p>This whitepaper is for informational purposes only and does not constitute financial or investment advice. Token issuance, availability, utility, and value are not guaranteed and are subject to development, compliance, and market conditions.</p>
-
-    <div class="footer">
-      © 2026 DogePow. All rights reserved.
-    </div>
-  </div>
-</div>
-</body>
-</html>
