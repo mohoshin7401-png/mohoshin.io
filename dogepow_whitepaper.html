@@ -5,6 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DogePow Token Whitepaper</title>
 <style>
+*{
+  box-sizing: border-box;
+}
+
 body{
   margin:0;
   font-family: Arial, sans-serif;
@@ -12,16 +16,32 @@ body{
   color:#eaf2ff;
   line-height:1.8;
 }
-.container{max-width:1000px;margin:auto;padding:24px;}
+
+.container{
+  max-width:1000px;
+  margin:auto;
+  padding:16px;
+}
+
 .hero{
   background:linear-gradient(135deg,#102447,#1a2f5c);
   border:1px solid rgba(255,255,255,.08);
   border-radius:24px;
-  padding:40px;
+  padding:24px;
   margin-bottom:24px;
 }
-h1{font-size:56px;margin:0 0 10px;color:#3db7ff;}
-.subtitle{font-size:22px;color:#b8c6dd;}
+
+h1{
+  font-size:42px;
+  margin:0 0 10px;
+  color:#3db7ff;
+}
+
+.subtitle{
+  font-size:18px;
+  color:#b8c6dd;
+}
+
 .badge{
   display:inline-block;
   margin-top:16px;
@@ -30,33 +50,132 @@ h1{font-size:56px;margin:0 0 10px;color:#3db7ff;}
   background:#0d6efd33;
   color:#52c7ff;
   font-weight:bold;
+  font-size:14px;
 }
+
 .card{
   background:#1a2340;
   border:1px solid rgba(255,255,255,.08);
   border-radius:24px;
-  padding:40px;
+  padding:24px;
 }
-h2{color:#2fc3ff;font-size:42px;margin-top:36px;}
-h3{font-size:30px;margin-top:28px;}
-p,li{font-size:22px;color:#d7e1f2;}
-table{width:100%;border-collapse:collapse;margin:20px 0;}
-th,td{padding:14px;border-bottom:1px solid rgba(255,255,255,.08);text-align:left;}
-th{color:#2fc3ff;}
+
+h2{
+  color:#2fc3ff;
+  font-size:32px;
+  margin-top:28px;
+  margin-bottom:16px;
+}
+
+h3{
+  font-size:24px;
+  margin-top:20px;
+  margin-bottom:12px;
+}
+
+p,li{
+  font-size:16px;
+  color:#d7e1f2;
+  margin-bottom:10px;
+}
+
+ul{
+  padding-left:20px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  margin:20px 0;
+  font-size:14px;
+}
+
+th,td{
+  padding:12px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+  text-align:left;
+}
+
+th{
+  color:#2fc3ff;
+  font-weight:bold;
+}
+
 .note{
   background:#16304f;
   border-left:4px solid #2fc3ff;
   padding:16px;
   border-radius:12px;
   margin:20px 0;
+  font-size:14px;
 }
+
 .footer{
   margin-top:24px;
-  padding:24px;
+  padding:16px;
   border-radius:20px;
   background:#16233d;
-  font-size:18px;
+  font-size:14px;
   color:#c9d5e7;
+  text-align:center;
+}
+
+/* Tablet devices (768px and up) */
+@media (min-width: 768px) {
+  .container{
+    padding:24px;
+  }
+  
+  .hero{
+    padding:40px;
+  }
+  
+  .card{
+    padding:40px;
+  }
+  
+  h1{
+    font-size:56px;
+  }
+  
+  .subtitle{
+    font-size:22px;
+  }
+  
+  h2{
+    font-size:42px;
+  }
+  
+  h3{
+    font-size:30px;
+  }
+  
+  p,li{
+    font-size:18px;
+  }
+  
+  table{
+    font-size:16px;
+  }
+  
+  th,td{
+    padding:14px;
+  }
+  
+  .footer{
+    font-size:18px;
+  }
+}
+
+/* Large screens (1024px and up) */
+@media (min-width: 1024px) {
+  .container{
+    padding:24px;
+  }
+  
+  p,li{
+    font-size:22px;
+  }
 }
 </style>
 </head>
@@ -93,7 +212,6 @@ th{color:#2fc3ff;}
       <tr><td>Marketing & Partnerships</td><td>5%</td><td>50,000,000 DPOW</td></tr>
     </table>
 
-    
     <h2>4. Use Cases</h2>
     <ul>
       <li>Virtual Mining Rewards</li>
@@ -141,7 +259,7 @@ th{color:#2fc3ff;}
     </ul>
 
     <h2>7. Legal Disclaimer</h2>
-    <p>This whitepaper is for informational purposes only and does not constitute financial or investment advice. Token issuance, availability, utility, and value are not guaranteed and are subject to development, compliance, and market conditions.</p>
+    <p>This whitepaper is for informational purposes only and does not constitute financial or investment advice. Token issuance, availability, utility, and value are not guaranteed and are subject to change.</p>
 
     <div class="footer">
       © 2026 DogePow. All rights reserved.
